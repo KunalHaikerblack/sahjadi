@@ -55,3 +55,99 @@ h1{
         filter: hue-rotate(360deg);
     }
 }
+/* guygf */
+.navbar{
+    display: flex;
+    align-items: center;
+    width:100%;
+    height:75px;
+    background-color: rgb(253, 255, 240);
+    border-radius: 7px;
+    justify-content: space-around;
+    position: absolute;
+    box-shadow: 0 0 22px black;
+    bottom: 0;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.button img,.button p{
+    user-select: none;
+}
+p{
+    font-family: sans-serif;
+}
+.shad{
+    text-shadow: 0 0 3px green;
+
+}
+.circle{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    /* background-color: rgb(22, 22, 22); */
+    border-radius: 50%;
+    position: absolute;
+    transition: left 0.5s ease-in;
+    opacity: 1;
+    z-index: 2;
+    
+    
+    
+}
+.active{
+    animation: top 0.3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes top{
+    0%{
+        bottom: 0px;
+        background-color: transparent;
+        box-shadow: 0 0 0px black;
+    }
+    100%{
+        bottom: 35px;
+        background-color: rgb(22, 22, 22);
+        /* box-shadow: 0 0 6px black; */
+        box-shadow: 0 0 10px rgb(255, 20, 3);
+        
+    }
+}
+.magic{
+    z-index: 4;
+    position: relative;
+    filter: invert(0);
+    
+    transition: all;
+    pointer-events: none;
+    
+    
+
+    
+}
+.clap{
+    animation: zoom 0.3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+        bottom: 0px;
+        filter: invert(0);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.8);
+        bottom: 28px;
+        filter: invert(1);
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+}

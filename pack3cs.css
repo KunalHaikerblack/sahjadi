@@ -10,14 +10,280 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
+/* yugu */
+.billo1{
+    animation: mahol1 2s linear;
+    animation-fill-mode: forwards;
+}
+.billo2{
+    animation: mahol2 2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes mahol1{
+    0%{
+        background-color: rgb(0, 0, 0);
+    }
+    100%{
+        background-color: #f4afc7;
+    }
+}
+@keyframes mahol2{
+    0%{
+        background-color: #f4afc7;
+    }
+    100%{
+        background-color: black;
+    }
+}
+
+
+/* hgu */
 .box{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    width: 100%;
+    
 }
 .running{
-    background-color: white;
-    width:65%;
-    height: 70vh;
+    background-color: rgb(255, 174, 0);
+    width:240px;
+    height:500px;
+    z-index: 2;
+    position: relative;
+    border-radius: 121px;
+    border: 9px solid white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:-40px;
+    
+}
+.joint1{
+    animation: girgit1 2s linear;
+    animation-fill-mode: forwards;
+}
+.joint2{
+    animation: girgit2 2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes girgit1{
+    0%{
+        background-color: rgb(255, 174, 0);
+    }
+    100%{
+        background-color: rgb(255, 34, 89);
+    }
+}
+@keyframes girgit2{
+    0%{
+        background-color: rgb(255, 34, 89);
+    }
+    100%{
+        background-color: rgb(255, 174, 0);
+    }
+}
+.heart{
+    background-color: rgb(189, 0, 0);
+    width:130px;
+    height:130px;
+    transform: rotate(45deg);
+    position: relative;
+    top:78px;
+    box-shadow: 0 0 12px rgb(189, 0, 0),
+                0 0 32px rgb(189, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+                  
+
+}
+.connect1{
+    animation: slide1 2s linear;
+    animation-fill-mode: forwards;
+}
+.connect2{
+    animation: slide2 2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes slide1{
+    0%{
+        top:78px;
+    }
+    100%{
+        top:310px;
+    }
+}
+@keyframes slide2{
+    0%{
+        top:310px;
+    }
+    100%{
+        top:78px;
+    }
+}
+
+.heart::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: rgb(189, 0, 0);
+    left:-50%;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgb(189, 0, 0),
+                0 0 22px rgb(189, 0, 0);
+
+              
+
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: rgb(189, 0, 0);
+    top:-50%;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgb(189, 0, 0),
+                0 0 22px rgb(189, 0, 0)
+                
+
+}
+.note{
+    position: absolute;
+    z-index: 5;
+    transform: rotate(-45deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Alkatra", system-ui;
+    letter-spacing: 6px;
+    font-weight: bolder;
+    text-shadow:  0 0 12px rgb(0, 0, 0);
+    line-height: 33px;
+    
+}
+.msj1{
+    position: absolute;
+    bottom: 60px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Love Ya Like A Sister", cursive;
+}
+.msj2{
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Love Ya Like A Sister", cursive;
+    
+}
+/* gfuw */
+.navbar{
+    display: flex;
+    align-items: center;
+    width:100%;
+    height:75px;
+    background-color: rgb(253, 255, 240);
+    border-radius: 7px;
+    justify-content: space-around;
+    position: absolute;
+    box-shadow: 0 0 22px black;
+    bottom: 0;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.button img,.button p{
+    user-select: none;
+}
+p{
+    font-family: sans-serif;
+}
+.shad{
+    text-shadow: 0 0 3px green;
+
+}
+.circle{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    /* background-color: rgb(22, 22, 22); */
+    border-radius: 50%;
+    position: absolute;
+    transition: left 0.5s ease-in;
+    opacity: 1;
+    z-index: 2;
+    
+    
+    
+}
+.active{
+    animation: top 0.3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes top{
+    0%{
+        bottom: 0px;
+        background-color: transparent;
+        box-shadow: 0 0 0px black;
+    }
+    100%{
+        bottom: 35px;
+        background-color: rgb(22, 22, 22);
+        /* box-shadow: 0 0 6px black; */
+        box-shadow: 0 0 10px green;
+        
+    }
+}
+.magic{
+    z-index: 4;
+    position: relative;
+    filter: invert(0);
+    
+    transition: all;
+    pointer-events: none;
+    
+    
+
+    
+}
+.clap{
+    animation: zoom 0.3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+        bottom: 0px;
+        filter: invert(0);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.8);
+        bottom: 28px;
+        filter: invert(1);
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
 }
