@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(140deg,rgb(255 0 106), rgb(255, 150, 176));
+    align-items: center;
+    justify-content: start;
+    
+
+}
+.box{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 14px;
+}
+.ln1{
+    display: flex;
+    gap: 16px;
+    font-family: "Anton", sans-serif;
+    
+    
+}
+h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 2px gray;
+}
+.move{
+    color: rgb(255, 64, 39);
+    text-shadow: 0 0 11px rgb(172, 0, 0);
+    opacity: 0;
+    
+    
+}
+.connect{
+    animation: slow 2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes slow{
+    0%{
+        opacity: 0;
+        filter: hue-rotate(310deg);
+    }
+    100%{
+        opacity: 1;
+        filter: hue-rotate(360deg);
+    }
+}
